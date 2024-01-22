@@ -1,4 +1,4 @@
-import "../components/Noticia.css";
+import "./Noticia.css";
 
 export const Noticia = () => {
   return (
@@ -54,14 +54,49 @@ export const Noticia = () => {
             </div>
 
             <div className="see-more-content">
-              <img
-                className="img"
-                alt="pessoa vendo filme"
-                src="./public/slide1.png"
-              />
-              <p className="p">
-                Worem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+              <div className="image-and-text">
+                <img
+                  className="img"
+                  alt="pessoa vendo filme"
+                  src="./public/slide1.png"
+                />
+                <p className="see-more-text">
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+
+              <div className="image-and-text">
+                <img
+                  className="img"
+                  alt="pessoa vendo filme"
+                  src="./public/slide1.png"
+                />
+                <p className="see-more-text">
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+
+              <div className="image-and-text">
+                <img
+                  className="img"
+                  alt="pessoa vendo filme"
+                  src="./public/slide1.png"
+                />
+                <p className="see-more-text">
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+
+              <div className="image-and-text">
+                <img
+                  className="img"
+                  alt="pessoa vendo filme"
+                  src="./public/slide1.png"
+                />
+                <p className="see-more-text">
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
             </div>
           </div>
         </div>

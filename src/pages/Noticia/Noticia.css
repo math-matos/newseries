@@ -17,9 +17,14 @@
   height: auto;
 }
 
-.noticia .text-wrapper {
-  color: #121212;
+.noticia .text-wrapper,
+.noticia .text-wrapper-7,
+.noticia .see-more-text {
   font-family: "Inter-Bold", Helvetica;
+  color: #121212;
+}
+
+.noticia .text-wrapper {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0;
@@ -31,7 +36,7 @@
 
 .noticia .por-fulano-silva,
 .noticia .dorem-ipsum-dolor,
-.noticia .p,
+.noticia .see-more-text,
 .noticia .por-fulano-silva {
   font-size: 2.2rem;
   font-family: "Inter-Regular", Helvetica;
@@ -78,8 +83,9 @@
 
 .noticia .see-more {
   height: 55rem;
-  position: relative;
   width: 42rem;
+  display: flex;
+  position: relative;
 }
 
 .noticia .see-more-line {
@@ -91,11 +97,23 @@
   width: 100%;
   max-width: 42rem;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.image-and-text {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+
+.image-and-text p {
+  margin-left: 2rem;
 }
 
 .noticia .text-wrapper-7 {
-  color: #121212;
-  font-family: "Inter-Bold", Helvetica;
   font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -115,14 +133,13 @@
   width: 15.6rem;
 }
 
-.noticia .p {
-  color: #121212;
-  font-family: "Inter-Bold", Helvetica;
+.noticia .see-more-text {
   font-weight: 700;
-  left: 18rem;
-  letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 1.1rem;
   width: 23.9rem;
+}
+
+.noticia {
+  display: flex;
+  align-items: end;
 }
