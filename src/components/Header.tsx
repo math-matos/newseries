@@ -1,21 +1,27 @@
+import { Link } from 'react-router-dom';
 import logoImg from '../assets/Vector.svg';
 
-export function Header() {
+interface Props {}
+
+export const Header: React.FC = (props: Props) => {
     return (
+        <>
         <header>
             <nav id='navbar'>
-                <div className="nav-brand">
-                    <img src={logoImg} alt="" />
-                    <h1>NEWSERIES</h1>
-                </div>
+                <Link to="/">
+                    <div className="nav-brand">
+                        <img src={logoImg} alt="" />
+                        <h1>NEWSERIES</h1>
+                    </div>
+                </Link>
 
                 <ul className="nav-list">
-                    <li><a href="/">Séries Nacionais</a></li>
-                    <li><a href="/">Séries Internacionais</a></li>
+                    <li><Link to="/">Séries Nacionais</Link></li>
+                    <li><Link to="/noticias">Séries Internacionais</Link></li>
                 </ul>
             </nav>
         </header>
+        </>
+        
     );
 }
-
-
