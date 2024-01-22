@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "keen-slider": "^6.8.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

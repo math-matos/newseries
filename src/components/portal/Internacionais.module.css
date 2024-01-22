@@ -1,0 +1,12 @@
+.seriesContainer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.titulos {
+  color: #121212;
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
