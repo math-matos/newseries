@@ -1,14 +1,16 @@
-import { Header } from "./components/Header";
-import { Noticia } from "./pages/Noticia";
+import { Header } from './components/Header';
+import Portal from './pages/Portal/Portal';
 
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
       <Header />
+      <Portal />
       <Noticia />
-    </Router>
+      
+    </>
+
   );
 }
 
