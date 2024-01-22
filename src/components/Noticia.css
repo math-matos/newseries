@@ -1,0 +1,79 @@
+:root {
+  font-size: 62.5%;
+}
+
+.noticia {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.noticia .div {
+  background-color: #ffffff;
+  height: 1024px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.noticia .principal-image {
+  width: 100%;
+  max-width: 86.7rem;
+  margin: 0 auto;
+  padding-top: 8.2rem;
+  padding-bottom: 5.2rem;
+
+  border-radius: 5rem;
+}
+
+.noticia .group {
+  height: 375px;
+  width: 100%;
+  max-width: 873px;
+  margin: 0 auto;
+}
+
+.noticia .text-wrapper,
+.noticia .por-fulano-silva,
+.noticia .dorem-ipsum-dolor {
+  color: #121212;
+  font-family: "Inter", Helvetica;
+  letter-spacing: 0;
+}
+
+.noticia .text-wrapper {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+  width: 100%;
+  max-width: 867px;
+  margin: 0 auto;
+}
+
+.noticia .por-fulano-silva,
+.noticia .span,
+.noticia .dorem-ipsum-dolor {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  max-width: 681px;
+  margin: 0 auto;
+}
+
+.noticia .text-wrapper-2 {
+  font-weight: 700;
+}
+
+.noticia .dorem-ipsum-dolor {
+  letter-spacing: 0.66px;
+  line-height: 35px;
+  text-align: justify;
+  width: 100%;
+  max-width: 867px;
+  margin: 0 auto;
+}
