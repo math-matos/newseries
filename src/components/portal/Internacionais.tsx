@@ -4,7 +4,7 @@ import slide1 from '/public/slide1.png';
 import slide2 from '/public/slide2.png';
 import slide3 from '/public/slide3.png';
 const Internacionais = () => {
-  const fotos = [slide2, slide3, slide1];
+  const fotos = [slide2, slide3, slide1, slide2];
 
   return (
     <div>

@@ -6,8 +6,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 
 const fotos = [slide1, slide2, slide3, slide1];
 
@@ -15,8 +17,17 @@ const Slides = () => {
   return (
     <>
       <Swiper
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
         navigation={true}
-        modules={[Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
+        effect="fade"
         className={styles.swiper}
       >
         {fotos.map((foto, index) => (

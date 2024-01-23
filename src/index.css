@@ -23,7 +23,7 @@
 header {
   background-color: #121212;
   box-shadow: 0 4px 7px rgba(107, 107, 107, 0.2);
-  margin-bottom: 8.2rem;
+  /* margin-bottom: 8.2rem; */
 }
 
 #navbar {

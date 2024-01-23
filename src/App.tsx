@@ -6,8 +6,8 @@ function App() {
   return (
     <>
       <Header />
-      <Noticia />
-      {/* <Portal/> */}
+      {/* <Noticia /> */}
+      <Portal />
     </>
   );
 }

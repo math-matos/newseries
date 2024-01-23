@@ -7,7 +7,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,6 +15,6 @@
 .titulos {
   color: #121212;
   font-family: Inter;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
