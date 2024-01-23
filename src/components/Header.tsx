@@ -1,6 +1,8 @@
 import logoImg from '../assets/Vector.svg';
 import BarraPesquisa from './BarraPesquisa';
 
+import { Link } from 'react-router-dom';
+
 import './Header.css';
 
 interface Props {}
@@ -11,16 +13,16 @@ export const Header: React.FC = (props: Props) => {
       <header>
         <nav id="navbar">
           <div className="nav-container">
-            <div className="nav-brand">
+          <Link to='/'><div className="nav-brand">
               <img src={logoImg} alt="" />
               <h1>NEWSERIES</h1>
-            </div>
+            </div> </Link>
             <ul className="nav-list">
               <li>
-                <a href="#">Séries Nacionais</a>
+              <Link to='/coloque-seu-texto'>Séries Nacionais</Link>
               </li>
               <li>
-                <a href="#">Séries Internacionais</a>
+              <Link to='/noticia'>Séries Internacionais</Link>
               </li>
             </ul>
           </div>
@@ -30,3 +32,4 @@ export const Header: React.FC = (props: Props) => {
     </>
   );
 };
+
