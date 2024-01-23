@@ -19,7 +19,7 @@
 .noticia .mid-text,
 .noticia .overlap-wrapper {
   width: 100%;
-  max-width: 144rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -40,7 +40,7 @@
   font-weight: 700;
   letter-spacing: 0;
   line-height: normal;
-  width: 86.7rem;
+  width: 100%;
   margin-top: 5.2rem;
   margin-bottom: 1rem;
 }
@@ -58,7 +58,7 @@
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
-  width: 68.1rem;
+  width: 100%;
   margin-bottom: 2rem;
 }
 
@@ -87,8 +87,8 @@
 }
 
 .noticia .see-more {
-  height: 55rem;
-  width: 42rem;
+  height: auto;
+  width: 100%;
   display: flex;
   position: relative;
 }
@@ -130,13 +130,38 @@
 }
 
 .noticia .feed-img {
-  height: 10.4rem;
+  height: auto;
   width: 15.6rem;
+  max-width: 100%;
+
   border-radius: 1rem;
 }
 
 .noticia .see-more-text {
   font-weight: 700;
   line-height: normal;
-  width: 23.9rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+  .noticia .text-wrapper {
+    font-size: 18px;
+  }
+
+  .noticia .por-fulano-silva {
+    font-size: 1.4rem;
+  }
+
+  .noticia .dorem-ipsum-dolor {
+    font-size: 1.2rem; 
+    line-height: 1.8rem; 
+  }
+
+  .noticia .see-more-text {
+    font-size: 1.4rem; 
+  }
+
+  .noticia .image-and-text p {
+    margin: 0.5rem 0; 
+  }
 }

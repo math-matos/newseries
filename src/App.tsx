@@ -8,12 +8,12 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/noticia" element={<Noticia/>}/>
-        <Route path="/" element={<Portal/>}/>
+        <Route path="/noticia" element={<Noticia />} />
+        <Route path="/" element={<Portal />} />
       </Routes>
 
       {/* <Noticia /> */}
-      <Portal />
+      {/* <Portal /> */}
     </>
   );
 }
