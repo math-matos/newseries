@@ -57,7 +57,7 @@ export const Noticia = () => {
           <div className="see-more-content">
             <div className="image-and-text">
               <img
-                className="img"
+                className="feed-img"
                 alt="pessoa vendo filme"
                 src="./public/slide1.png"
               />
@@ -68,7 +68,7 @@ export const Noticia = () => {
 
             <div className="image-and-text">
               <img
-                className="img"
+                className="feed-img"
                 alt="pessoa vendo filme"
                 src="./public/slide1.png"
               />
@@ -79,7 +79,7 @@ export const Noticia = () => {
 
             <div className="image-and-text">
               <img
-                className="img"
+                className="feed-img"
                 alt="pessoa vendo filme"
                 src="./public/slide1.png"
               />
@@ -90,7 +90,7 @@ export const Noticia = () => {
 
             <div className="image-and-text">
               <img
-                className="img"
+                className="feed-img"
                 alt="pessoa vendo filme"
                 src="./public/slide1.png"
               />
