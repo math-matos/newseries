@@ -129,9 +129,10 @@
   width: 42rem;
 }
 
-.noticia .img {
+.noticia .feed-img {
   height: 10.4rem;
   width: 15.6rem;
+  border-radius: 1rem;
 }
 
 .noticia .see-more-text {
