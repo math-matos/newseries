@@ -5,7 +5,7 @@
 .swiperSlide {
   text-align: center;
   font-size: 18px;
-
+  background-repeat: no-repeat;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -19,4 +19,34 @@
 
 .swiperSlide img {
   display: block;
+}
+
+.container {
+  position: relative;
+}
+
+.titulo {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.subtitulo {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
