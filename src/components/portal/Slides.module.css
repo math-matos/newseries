@@ -8,6 +8,7 @@
   width: 100%;
   height: 50rem;
   object-fit: cover;
+  object-position: 50% 50%;
   border-radius: 1rem;
   filter: brightness(50%);
 }
@@ -37,9 +38,10 @@
   top: 88%;
   left: 1.5rem;
   color: white;
-  font-family: Inter;
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  width: 130ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
