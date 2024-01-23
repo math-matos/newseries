@@ -3,31 +3,31 @@ import { api, Series } from '../../api';
 import styles from './Slides.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
-import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 const Slides = () => {
   const [series, setSeries] = useState<[Series]>();
   const seriesPainel = series && series.slice(0, 4);
   function fetchSeries() {
     api
-      .get('https://api.themoviedb.org/3/tv/popular')
+      .get("https://api.themoviedb.org/3/tv/popular")
       .then((response) => {
         if (response.status == 200) {
           setSeries(response.data.results);
         }
       })
       .catch((error) => {
-        console.log('LoadTvs error ' + error);
+        console.log("LoadTvs error " + error);
       });
   }
 
   useEffect(() => fetchSeries(), []);
-  const image_path = 'https://image.tmdb.org/t/p/w500/';
+  const image_path = "https://image.tmdb.org/t/p/w500/";
 
   return (
     <>

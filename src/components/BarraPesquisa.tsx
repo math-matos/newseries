@@ -1,9 +1,10 @@
-import styles from './BarraPesquisa.module.css';
+import styles from "./BarraPesquisa.module.css";
 
 type Props = {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
 };
+
 const BarraPesquisa = ({ search, setSearch }: Props) => {
   return (
     <div className={styles.inputs}>
