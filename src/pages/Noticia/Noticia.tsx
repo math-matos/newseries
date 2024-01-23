@@ -1,4 +1,4 @@
-import "./Noticia.css";
+import './Noticia.css';
 
 export const Noticia = () => {
   return (
@@ -15,7 +15,7 @@ export const Noticia = () => {
           </p>
           <p className="por-fulano-silva">
             <span className="span-1">
-              Por Fulano Silva - 01/01/1990 - 12h00 em{" "}
+              Por Fulano Silva - 01/01/1990 - 12h00 em{' '}
             </span>
             <strong>Séries Nacionais</strong>
           </p>
@@ -45,58 +45,58 @@ export const Noticia = () => {
             facilisis nisi, ac posuere leo.
           </p>
         </div>
+      </div>
 
-        <div className="overlap-wrapper">
-          <div className="see-more">
-            <div className="see-more-line">
-              <div className="text-wrapper-7">Veja mais</div>
-              <img className="line" alt="linha" src="./public/line7.png" />
+      <div className="overlap-wrapper">
+        <div className="see-more">
+          <div className="see-more-line">
+            <div className="text-wrapper-7">Veja mais</div>
+            <img className="line" alt="linha" src="./public/line7.png" />
+          </div>
+
+          <div className="see-more-content">
+            <div className="image-and-text">
+              <img
+                className="img"
+                alt="pessoa vendo filme"
+                src="./public/slide1.png"
+              />
+              <p className="see-more-text">
+                Worem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
 
-            <div className="see-more-content">
-              <div className="image-and-text">
-                <img
-                  className="img"
-                  alt="pessoa vendo filme"
-                  src="./public/slide1.png"
-                />
-                <p className="see-more-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+            <div className="image-and-text">
+              <img
+                className="img"
+                alt="pessoa vendo filme"
+                src="./public/slide1.png"
+              />
+              <p className="see-more-text">
+                Worem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
 
-              <div className="image-and-text">
-                <img
-                  className="img"
-                  alt="pessoa vendo filme"
-                  src="./public/slide1.png"
-                />
-                <p className="see-more-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+            <div className="image-and-text">
+              <img
+                className="img"
+                alt="pessoa vendo filme"
+                src="./public/slide1.png"
+              />
+              <p className="see-more-text">
+                Worem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
 
-              <div className="image-and-text">
-                <img
-                  className="img"
-                  alt="pessoa vendo filme"
-                  src="./public/slide1.png"
-                />
-                <p className="see-more-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
-
-              <div className="image-and-text">
-                <img
-                  className="img"
-                  alt="pessoa vendo filme"
-                  src="./public/slide1.png"
-                />
-                <p className="see-more-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+            <div className="image-and-text">
+              <img
+                className="img"
+                alt="pessoa vendo filme"
+                src="./public/slide1.png"
+              />
+              <p className="see-more-text">
+                Worem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
         </div>

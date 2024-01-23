@@ -1,8 +1,10 @@
 .noticia {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   justify-content: center;
   width: 100%;
+  padding: 4rem;
+  gap: 2rem;
 }
 
 .noticia .mid-text,
@@ -20,7 +22,7 @@
 .noticia .text-wrapper,
 .noticia .text-wrapper-7,
 .noticia .see-more-text {
-  font-family: "Inter-Bold", Helvetica;
+  font-family: 'Inter-Bold', Helvetica;
   color: #121212;
 }
 
@@ -39,7 +41,7 @@
 .noticia .see-more-text,
 .noticia .por-fulano-silva {
   font-size: 2.2rem;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: 'Inter-Regular', Helvetica;
   color: #121212;
 }
 
@@ -75,9 +77,8 @@
   width: 3.5rem;
 }
 
-.noticia .line {
+.line {
   width: 100%;
-  max-width: 42rem;
   height: 0.3rem;
 }
 
@@ -137,9 +138,4 @@
   font-weight: 700;
   line-height: normal;
   width: 23.9rem;
-}
-
-.noticia {
-  display: flex;
-  align-items: end;
 }
