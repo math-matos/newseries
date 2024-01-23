@@ -1,7 +1,6 @@
+import { useEffect, useState } from 'react';
+import { api } from '../../api';
 import styles from './Slides.module.css';
-import slide1 from '/public/slide1.png';
-import slide2 from '/public/slide2.png';
-import slide3 from '/public/slide3.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -11,9 +10,32 @@ import 'swiper/css/effect-fade';
 
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 
-const fotos = [slide1, slide2, slide3, slide1];
+interface Series {
+  origin_country: [string];
+  name: string;
+  overview: string;
+  poster_path: string;
+}
 
 const Slides = () => {
+  const [series, setSeries] = useState<[Series]>();
+
+  function fetchSeries() {
+    api
+      .get('https://api.themoviedb.org/3/tv/popular')
+      .then((response) => {
+        if (response.status == 200) {
+          setSeries(response.data.results);
+        }
+      })
+      .catch((error) => {
+        console.log('LoadTvs error ' + error);
+      });
+  }
+
+  useEffect(() => fetchSeries(), []);
+  const image_path = 'https://image.tmdb.org/t/p/w500/';
+
   return (
     <>
       <Swiper
@@ -30,33 +52,23 @@ const Slides = () => {
         effect="fade"
         className={styles.swiper}
       >
-        {fotos.map((foto, index) => (
-          <SwiperSlide key={index}>
-            <div className={styles.container}>
-              <img src={foto} alt="" className={styles.swiperSlide} />
-              <h1 className={styles.titulo}>
-                Worem ipsum dolor sit amet, consectetur adipiscing elit.
-              </h1>
-              <h2 className={styles.subtitulo}>
-                Worem ipsum dolor sit amet, consectetur adipiscing elit.
-              </h2>
-            </div>
-          </SwiperSlide>
-        ))}
+        {series &&
+          series.map((serie, index) => (
+            <SwiperSlide key={index}>
+              <div className={styles.container}>
+                <img
+                  src={`${image_path}${serie.poster_path}`}
+                  alt={`Poster da série ${serie.name}`}
+                  className={styles.swiperSlide}
+                />
+                <h1 className={styles.titulo}>{serie.name}</h1>
+                <h2 className={styles.subtitulo}>{serie.overview}</h2>
+              </div>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </>
   );
 };
 
 export default Slides;
-
-{
-  /* <div className="container">
-  <img
-    src="https://i.imgur.com/4Z9xLJk.jpg"
-    alt="Imagem de um experimento de fusão nuclear"
-    className="image"
-  />
-  <div className="text">Notícia: Fusão nuclear supera temperatura do sol</div>
-</div>; */
-}
