@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { api } from '../../api';
+import { api, Series } from '../../api';
 import styles from './Slides.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,16 +10,9 @@ import 'swiper/css/effect-fade';
 
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 
-interface Series {
-  origin_country: [string];
-  name: string;
-  overview: string;
-  poster_path: string;
-}
-
 const Slides = () => {
   const [series, setSeries] = useState<[Series]>();
-
+  const seriesPainel = series && series.slice(0, 4);
   function fetchSeries() {
     api
       .get('https://api.themoviedb.org/3/tv/popular')
@@ -52,8 +45,8 @@ const Slides = () => {
         effect="fade"
         className={styles.swiper}
       >
-        {series &&
-          series.map((serie, index) => (
+        {seriesPainel &&
+          seriesPainel.map((serie, index) => (
             <SwiperSlide key={index}>
               <div className={styles.container}>
                 <img
