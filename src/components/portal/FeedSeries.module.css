@@ -1,0 +1,42 @@
+.seriesContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.titulos {
+  color: #121212;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.botoesContainer {
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
+  width: fit-content;
+  padding-top: 2rem;
+}
+.botaoMenos {
+  border-radius: 40% 0 0 40%;
+  background: #fed916;
+}
+.botaoMenosDesativado {
+  border-radius: 40% 0 0 40%;
+  background: #a69851;
+}
+.botaoMais {
+  border-radius: 0 40% 40% 0;
+  background: #fed916;
+}
+.botaoMaisDesativado {
+  border-radius: 0 40% 40% 0;
+  background: #a69851;
+}
+
+.botaoMais:focus {
+  border: none;
+}
