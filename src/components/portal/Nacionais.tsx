@@ -1,24 +1,69 @@
-import styles from "./Nacionais.module.css";
-import CardNoticia from "../CardNoticia";
-import slide1 from "/public/slide1.png";
-import slide2 from "/public/slide2.png";
-import slide3 from "/public/slide3.png";
-const Nacionais = () => {
-  const fotos = [slide1, slide2, slide3, slide2];
+import { api, Series } from '../../api';
+import { useEffect, useState } from 'react';
+import styles from './Nacionais.module.css';
+import CardNoticia from '../CardNoticia';
 
+const Nacionais = () => {
+  const [series, setSeries] = useState<[Series]>();
+  const [itensRenderizados, setItensRenderizados] = useState<number[]>([0, 3]);
+
+  const seriesRenderizadas =
+    series && series.slice(itensRenderizados[0], itensRenderizados[1]);
+
+  const mostrarSeries = (valor: string) => {
+    if (valor === 'mais') {
+      const novosItens = itensRenderizados.map((item) => item + 3);
+      setItensRenderizados(novosItens);
+    }
+
+    if (valor === 'menos') {
+      if (itensRenderizados[0] > 3) {
+        const novosItens = itensRenderizados.map((item) => item - 3);
+        setItensRenderizados(novosItens);
+      } else {
+        setItensRenderizados([0, 3]);
+      }
+    }
+  };
+
+  function fetchSeries() {
+    api
+      .get('https://api.themoviedb.org/3/tv/popular')
+      .then((response) => {
+        if (response.status == 200) {
+          setSeries(response.data.results);
+        }
+      })
+      .catch((error) => {
+        console.log('LoadTvs error ' + error);
+      });
+  }
+
+  useEffect(() => fetchSeries(), []);
+
+  const image_path = 'https://image.tmdb.org/t/p/w500/';
   return (
     <div>
       <h1 className={styles.titulos}>Séries Nacionais</h1>
 
       <div className={styles.seriesContainer}>
-        {fotos.map((foto) => (
-          <CardNoticia
-            url={foto}
-            titulo="Torem ipsum dolor sit amet, consectetur adipiscing elit."
-            subtitulo="Torem ipsum dolor sit amet, consectetur adipiscing elit."
-          />
-        ))}
+        {seriesRenderizadas &&
+          seriesRenderizadas.map((serie, index) => (
+            <CardNoticia
+              url={`${image_path}${serie.poster_path}`}
+              titulo={serie.name}
+              subtitulo={serie.overview}
+              key={index}
+            />
+          ))}
       </div>
+
+      <button onClick={() => mostrarSeries('menos')}>
+        <img src="/public/arrowLeft.svg" alt="" />
+      </button>
+      <button onClick={() => mostrarSeries('mais')}>
+        <img src="/public/arrowRight.svg" alt="" />
+      </button>
     </div>
   );
 };
