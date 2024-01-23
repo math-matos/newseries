@@ -27,12 +27,11 @@
 
 .titulo {
   position: absolute;
-  top: 90%;
-  left: 10%;
-  /* transform: translate(-50%, -50%); */
+  top: 80%;
+  left: 1.5rem;
   color: white;
   font-family: Inter;
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -40,12 +39,11 @@
 
 .subtitulo {
   position: absolute;
-  top: 90%;
-  left: 10%;
-  /* transform: translate(-50%, -50%); */
+  top: 88%;
+  left: 1.5rem;
   color: white;
   font-family: Inter;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
