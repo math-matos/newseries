@@ -1,4 +1,4 @@
-import './Noticia.css';
+import "./Noticia.css";
 
 export const Noticia = () => {
   return (
@@ -15,7 +15,7 @@ export const Noticia = () => {
           </p>
           <p className="por-fulano-silva">
             <span className="span-1">
-              Por Fulano Silva - 01/01/1990 - 12h00 em{' '}
+              Por Fulano Silva - 01/01/1990 - 12h00 em{" "}
             </span>
             <strong>Séries Nacionais</strong>
           </p>
@@ -33,7 +33,7 @@ export const Noticia = () => {
             tellus.
             <br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Curabitur
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Curabitur
             tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a
             convallis. Sed ut vulputate nisi. Integer in felis sed leo
             vestibulum venenatis. Suspendisse quis arcu sem. Aenean feugiat ex
@@ -51,7 +51,7 @@ export const Noticia = () => {
         <div className="see-more">
           <div className="see-more-line">
             <div className="text-wrapper-7">Veja mais</div>
-            <img className="line" alt="linha" src="./public/line7.png" />
+            <img className="line" alt="linha preta" src="./public/line7.png" />
           </div>
 
           <div className="see-more-content">
