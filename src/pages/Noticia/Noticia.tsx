@@ -6,7 +6,7 @@ export const Noticia = () => {
   const { id } = useParams();
   const { series } = useFetch();
 
-  const serieSelecionada = series && series.find((serie) => serie.id === id);
+  const serieSelecionada = series && series.find((serie) => serie.id == id);
   console.log(serieSelecionada);
 
   return (
@@ -15,19 +15,23 @@ export const Noticia = () => {
         <img
           className="principal-image"
           alt="imagem principal"
-          // src={`https://image.tmdb.org/t/p/w500/${
-          //   serieSelecionada!.poster_path
-          // }`}
+          src={`https://image.tmdb.org/t/p/w500/${
+            serieSelecionada && serieSelecionada.poster_path
+          }`}
         />
         <div className="container">
-          {/* <p className="text-wrapper">{serieSelecionada?.name}</p> */}
+          <p className="text-wrapper">
+            {serieSelecionada && serieSelecionada.name}
+          </p>
           <p className="por-fulano-silva">
             <span className="span-1">
               Por Fulano Silva - 01/01/1990 - 12h00 em{' '}
             </span>
             <strong>Séries Nacionais</strong>
           </p>
-          {/* <p className="dorem-ipsum-dolor">{serieSelecionada?.overview}</p> */}
+          <p className="dorem-ipsum-dolor">
+            {serieSelecionada && serieSelecionada.overview}
+          </p>
         </div>
       </div>
 
@@ -43,7 +47,7 @@ export const Noticia = () => {
               <img
                 className="feed-img"
                 alt="pessoa vendo filme"
-                src="./public/slide1.png"
+                src="/public/slide1.png"
               />
               <p className="see-more-text">
                 Worem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -54,7 +58,7 @@ export const Noticia = () => {
               <img
                 className="feed-img"
                 alt="pessoa vendo filme"
-                src="./public/slide1.png"
+                src="/public/slide1.png"
               />
               <p className="see-more-text">
                 Worem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -65,7 +69,7 @@ export const Noticia = () => {
               <img
                 className="feed-img"
                 alt="pessoa vendo filme"
-                src="./public/slide1.png"
+                src="/public/slide1.png"
               />
               <p className="see-more-text">
                 Worem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -76,7 +80,7 @@ export const Noticia = () => {
               <img
                 className="feed-img"
                 alt="pessoa vendo filme"
-                src="./public/slide1.png"
+                src="/public/slide1.png"
               />
               <p className="see-more-text">
                 Worem ipsum dolor sit amet, consectetur adipiscing elit.
