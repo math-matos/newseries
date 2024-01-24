@@ -1,9 +1,9 @@
-import logoImg from "../assets/Vector.svg";
-import BarraPesquisa from "./BarraPesquisa";
+import logoImg from '../assets/Vector.svg';
+import BarraPesquisa from './BarraPesquisa';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import "./Header.css";
+import './Header.css';
 
 interface Props {}
 
@@ -17,7 +17,7 @@ export const Header: React.FC = (props: Props) => {
               <div className="nav-brand">
                 <img src={logoImg} alt="" />
                 <h1>NEWSERIES</h1>
-              </div>{" "}
+              </div>{' '}
             </Link>
             <ul className="nav-list">
               <li>
@@ -34,3 +34,5 @@ export const Header: React.FC = (props: Props) => {
     </>
   );
 };
+
+export default Header;

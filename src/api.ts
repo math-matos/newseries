@@ -1,11 +1,5 @@
 import axios from "axios";
 
-export interface Series {
-  origin_country: [string];
-  name: string;
-  overview: string;
-  poster_path: string;
-}
 export const api = axios.create({
   baseURL: 'https://api.themoviedb.org/3/tv/popular',
   params: {
