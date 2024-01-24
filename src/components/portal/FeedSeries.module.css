@@ -22,19 +22,19 @@
   padding-top: 2rem;
 }
 .botaoMenos {
-  border-radius: 40% 0 0 40%;
+  border-radius: 35% 0 0 35%;
   background: #fed916;
 }
 .botaoMenosDesativado {
-  border-radius: 40% 0 0 40%;
+  border-radius: 35% 0 0 35%;
   background: #a69851;
 }
 .botaoMais {
-  border-radius: 0 40% 40% 0;
+  border-radius: 0 35% 35% 0;
   background: #fed916;
 }
 .botaoMaisDesativado {
-  border-radius: 0 40% 40% 0;
+  border-radius: 0 35% 35% 0;
   background: #a69851;
 }
 
