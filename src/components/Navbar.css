@@ -3,7 +3,7 @@
   align-items: center;
 
   gap: 2rem;
-  margin-left: 6.4rem;
+  /* margin-left: 6.4rem; */
 }
 
 .nav-brand img {
@@ -25,8 +25,7 @@ nav {
   position: sticky; /* Header preso no topo da pagina */
 
   box-shadow: 0 4px 7px rgba(107, 107, 107, 0.2);
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 2rem 4rem;
 }
 
 nav .title {

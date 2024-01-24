@@ -4,11 +4,11 @@ import FeedSeries from '../../components/portal/FeedSeries';
 
 const Portal = () => {
   return (
-    <div className={styles.body}>
+    <main className={styles.body}>
       <Slides />
       <FeedSeries title="Nacionais" />
-      <FeedSeries title="internacionais" />
-    </div>
+      <FeedSeries title="Internacionais" />
+    </main>
   );
 };
 
