@@ -6,8 +6,7 @@ import Portal from './pages/Portal/Portal';
 function App() {
   return (
     <>
-      <Navbar />
-      {/* <Header /> */}
+      <Header />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Portal />} />
         <Route path="/serie/:id/" element={<Noticia />} />
