@@ -39,7 +39,7 @@ export const Noticia = () => {
         <div className="see-more">
           <div className="see-more-line">
             <div className="text-wrapper-7">Veja mais</div>
-            <img className="line" alt="linha preta" src="./public/line7.png" />
+            <img className="line" alt="linha preta" src="../../../public/Line7.png" />
           </div>
 
           <div className="see-more-content">
