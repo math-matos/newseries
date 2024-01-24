@@ -20,7 +20,7 @@ export const Noticia = () => {
         />
         <div className="container">
           <p className="text-wrapper">
-            Série de artes marciais continua rivalidade de Karate Kid  {/* // configurar com a API {serieSelecionada?.name} */}
+            Série de artes marciais continua rivalidade de Karate Kida  {/* // configurar com a API {serieSelecionada?.name} */}
           </p>
           <p className="por-fulano-silva">
             <span className="span-1">
