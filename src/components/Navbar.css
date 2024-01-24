@@ -70,8 +70,8 @@ nav ul li a:hover {
 nav .menu {
   display: none;
   position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
+  top: 3.5rem;
+  right: 3rem;
   flex-direction: column;
   justify-content: space-between;
   width: 2.25rem;
@@ -81,7 +81,7 @@ nav .menu {
 nav .menu span {
   height: 0.4rem;
   width: 100%;
-  background-color: #fff;
+  background-color: white;
   border-radius: 0.2rem;
 }
 
