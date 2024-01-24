@@ -1,10 +1,10 @@
-import { useState } from "react";
-import logoImg from "../assets/Vector.svg";
-import BarraPesquisa from "./BarraPesquisa";
+import { useState } from 'react';
+import logoImg from '../assets/Vector.svg';
+import BarraPesquisa from './BarraPesquisa';
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from 'react-router-dom';
 
-import "./Navbar.css";
+import './Navbar.css';
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ export const Navbar = () => {
         <span></span>
         <span></span>
       </div>
-      <ul className={menuOpen ? "open" : ""}>
+      <ul className={menuOpen ? 'open' : ''}>
         <li>
           <NavLink to="/">Séries Nacionais</NavLink>
         </li>

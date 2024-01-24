@@ -23,15 +23,18 @@
   margin: 0 auto;
 }
 
-.noticia .principal-image {
-  max-width: 100%;
-  height: auto;
+.principal-image {
+  width: 100%;
+  max-height: 40rem;
+  border-radius: 1rem;
+  object-position: 0 20%;
+  object-fit: cover;
 }
 
 .noticia .text-wrapper,
 .noticia .text-wrapper-7,
 .noticia .see-more-text {
-  font-family: "Inter-Bold", Helvetica;
+  font-family: 'Inter-Bold', Helvetica;
   color: #121212;
 }
 
@@ -50,7 +53,7 @@
 .noticia .see-more-text,
 .noticia .por-fulano-silva {
   font-size: 2.2rem;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: 'Inter-Regular', Helvetica;
   color: #121212;
 }
 
@@ -153,15 +156,15 @@
   }
 
   .noticia .dorem-ipsum-dolor {
-    font-size: 1.2rem; 
-    line-height: 1.8rem; 
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
 
   .noticia .see-more-text {
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
   }
 
   .noticia .image-and-text p {
-    margin: 0.5rem 0; 
+    margin: 0.5rem 0;
   }
 }

@@ -3,7 +3,7 @@ import BarraPesquisa from './BarraPesquisa';
 
 import { Link } from 'react-router-dom';
 
-import './Header.css';
+import './Navbar.css';
 
 interface Props {}
 

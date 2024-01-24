@@ -23,7 +23,7 @@ nav {
   background-color: #121212;
   color: white;
   position: sticky; /* Header preso no topo da pagina */
-  
+
   box-shadow: 0 4px 7px rgba(107, 107, 107, 0.2);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -63,7 +63,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: rgb(96, 96, 255);
+  color: #fed916;
   transition: color 0.3s;
 }
 
@@ -116,4 +116,3 @@ nav .menu span {
     margin: 0.2rem 0.5rem;
   }
 }
-
