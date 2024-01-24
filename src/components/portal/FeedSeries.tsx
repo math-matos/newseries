@@ -1,15 +1,18 @@
-import { api, Series } from '../../api';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './FeedSeries.module.css';
 import CardNoticia from '../CardNoticia';
+import { Link } from 'react-router-dom';
+import useFetch from '../../hooks/useFetch';
 
 type Props = {
   title: string;
 };
 
 const FeedSeries = ({ title }: Props) => {
-  const [series, setSeries] = useState<[Series]>();
+  const { series } = useFetch();
+
   const [itensRenderizados, setItensRenderizados] = useState<number[]>([0, 3]);
+
   const classeBotaoMenos =
     series && itensRenderizados[0] === 0
       ? 'botaoMenosDesativado'
@@ -40,37 +43,26 @@ const FeedSeries = ({ title }: Props) => {
     }
   };
 
-  function fetchSeries() {
-    api
-      .get('https://api.themoviedb.org/3/tv/popular')
-      .then((response) => {
-        if (response.status == 200) {
-          setSeries(response.data.results);
-        }
-      })
-      .catch((error) => {
-        console.log('LoadTvs error ' + error);
-      });
-  }
-
-  useEffect(() => fetchSeries(), []);
-
   const image_path = 'https://image.tmdb.org/t/p/w500/';
+
   return (
     <div>
       <h1 className={styles.titulos}>Series {title}</h1>
 
-      <div className={styles.seriesContainer}>
+      <ul className={styles.seriesContainer}>
         {seriesRenderizadas &&
           seriesRenderizadas.map((serie, index) => (
-            <CardNoticia
-              url={`${image_path}${serie.poster_path}`}
-              titulo={serie.name}
-              subtitulo={serie.overview}
-              key={index}
-            />
+            <li key={index}>
+              <Link to={`/serie/${serie.id}/`}>
+                <CardNoticia
+                  url={`${image_path}${serie.poster_path}`}
+                  titulo={serie.name}
+                  subtitulo={serie.overview}
+                />
+              </Link>
+            </li>
           ))}
-      </div>
+      </ul>
 
       <div className={styles.botoesContainer}>
         <button
