@@ -4,6 +4,12 @@ input:focus {
   border: none;
   color: #161719;
 }
+
+input {
+  font-size: 2rem;
+  width: 100%;
+}
+
 .inputs {
   display: flex;
   border-radius: 0.625rem;
