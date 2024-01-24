@@ -5,11 +5,9 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 
-interface Props {}
-
-export const Header: React.FC = (props: Props) => {
+export const Header = () => {
   return (
-    <>
+    <nav>
       <header>
         <nav id="navbar">
           <div className="nav-container">
@@ -31,6 +29,6 @@ export const Header: React.FC = (props: Props) => {
           <BarraPesquisa />
         </nav>
       </header>
-    </>
+    </nav>
   );
 };
