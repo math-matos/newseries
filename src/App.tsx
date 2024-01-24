@@ -1,7 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
-import Noticia from './pages/Noticia/Noticia';
-import Portal from './pages/Portal/Portal';
-import { Navbar } from './components/Navbar';
+import { Route, Routes } from "react-router-dom";
+import Noticia from "./pages/Noticia/Noticia";
+import Portal from "./pages/Portal/Portal";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Portal />} />
-        <Route path="/serie/:id/" element={<Noticia />} />
+        <Route path="/noticia" element={<Noticia />} />
       </Routes>
     </>
   );

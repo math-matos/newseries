@@ -1,6 +1,6 @@
-import { useParams } from 'react-router-dom';
-import './Noticia.css';
-import useFetch from '../../hooks/useFetch';
+import { useParams } from "react-router-dom";
+import "./Noticia.css";
+import useFetch from "../../hooks/useFetch";
 
 export const Noticia = () => {
   const { id } = useParams();
@@ -25,7 +25,7 @@ export const Noticia = () => {
           </p>
           <p className="por-fulano-silva">
             <span className="span-1">
-              Por Fulano Silva - 01/01/1990 - 12h00 em{' '}
+              Por Fulano Silva - 01/01/1990 - 12h00 em{" "}
             </span>
             <strong>Séries Nacionais</strong>
           </p>
