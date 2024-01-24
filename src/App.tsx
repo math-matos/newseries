@@ -1,17 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
 import Noticia from './pages/Noticia/Noticia';
 import Portal from './pages/Portal/Portal';
-import { Search } from './pages/Search/Search';
+import { Navbar } from './components/Navbar';
 
 function App() {
   return (
     <>
-      <Header />
+      <Navbar />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Portal />} />
         <Route path="/serie/:id/" element={<Noticia />} />
-        <Route path="search" element={<Search />} />
       </Routes>
     </>
   );
