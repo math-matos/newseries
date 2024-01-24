@@ -24,10 +24,15 @@ export const Navbar = () => {
       </div>
       <ul className={menuOpen ? 'open' : ''}>
         <li>
-          <NavLink to="/">Séries Nacionais</NavLink>
+          <NavLink to="/">Pagina Inicial</NavLink>
         </li>
+
         <li>
-          <NavLink to="/noticia">Séries Internacionais</NavLink>
+          <NavLink to="/nacional">Séries Nacionais</NavLink>
+        </li>
+        
+        <li>
+          <NavLink to="/internacional">Séries Internacionais</NavLink>
         </li>
       </ul>
       <BarraPesquisa />
