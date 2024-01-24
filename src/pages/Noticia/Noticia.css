@@ -78,7 +78,7 @@
 .noticia .header {
   background-color: transparent;
   height: 9rem;
-  width: 144rem;
+  width: 100%;
 }
 
 .noticia .vector {
