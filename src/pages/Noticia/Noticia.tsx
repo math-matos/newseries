@@ -16,7 +16,7 @@ export const Noticia = () => {
           className="principal-image"
           alt="imagem principal"
           src={`https://image.tmdb.org/t/p/w500/${
-            serieSelecionada && serieSelecionada.poster_path
+            serieSelecionada && serieSelecionada.backdrop_path
           }`}
         />
         <div className="container">

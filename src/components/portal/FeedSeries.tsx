@@ -55,7 +55,7 @@ const FeedSeries = ({ title }: Props) => {
             <li key={index}>
               <Link to={`/serie/${serie.id}/`}>
                 <CardNoticia
-                  url={`${image_path}${serie.poster_path}`}
+                  url={`${image_path}${serie.backdrop_path}`}
                   titulo={serie.name}
                   subtitulo={serie.overview}
                 />
