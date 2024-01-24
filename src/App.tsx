@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Portal />} />
-        <Route path="/noticia" element={<Noticia />} />
+        <Route path="/serie/:id" element={<Noticia />} />
       </Routes>
     </>
   );
