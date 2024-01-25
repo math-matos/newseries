@@ -24,7 +24,7 @@
 }
 
 .principal-image {
-  width: 100%;
+  width: 100rem;
   max-height: 40rem;
   border-radius: 2rem;
   object-position: 0 20%;

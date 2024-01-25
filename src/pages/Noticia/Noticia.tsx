@@ -25,7 +25,7 @@ export const Noticia = () => {
           </p>
           <p className="por-fulano-silva">
             <span className="span-1">
-              Por Fulano Silva - 01/01/1990 - 12h00 em{" "}
+              Por {`${serieSelecionada && serieSelecionada.name}`} - 01/01/1990 - 12h00 em{" "}
             </span>
             <strong>Séries Nacionais</strong>
           </p>
