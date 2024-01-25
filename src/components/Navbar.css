@@ -44,10 +44,6 @@ nav ul {
   gap: 2rem;
 }
 
-nav ul li {
-  list-style: none;
-}
-
 nav ul li a {
   color: white;
   font-weight: 500;
@@ -73,13 +69,13 @@ nav .menu {
   right: 0.5rem;
   flex-direction: column;
   justify-content: space-between;
-  width: 2.25rem;
+  max-width: 2.25rem;
   height: 2rem;
 }
 
 nav .menu span {
   height: 0.4rem;
-  width: 100%;
+  max-width: 100%;
   background-color: #fff;
   border-radius: 0.2rem;
 }

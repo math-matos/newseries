@@ -17,12 +17,15 @@
 .titulo {
   font-size: 1.75rem;
   font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .subtitulo {
   font-size: 1.5rem;
   font-weight: 400;
-  max-width: 50ch;
+  max-width: 40ch;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -35,27 +38,30 @@
   max-width: 100%;
 }
 
-@media (max-width: 480px) {
+/* Desktop padrão */
+@media (max-width: 1280px) {
   .container {
     gap: 1rem;
-    max-width: 100%;
   }
 
   .cardImg {
-    display: block;
-    max-height: 25rem;
+    max-height: 20rem;
   }
 
   .titulo {
-    font-size: 1.75rem;
-    font-weight: 700;
+    font-size: 1.7rem;
     max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .subtitulo {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.3rem;
     max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .textContainer {
@@ -63,5 +69,106 @@
     flex-direction: column;
     gap: 1rem;
     max-width: 100%;
+  }
+}
+
+/* Notebook */
+@media (max-width: 1024px) {
+  .container {
+    gap: 1.25rem;
+  }
+
+  .cardImg {
+    max-height: 20rem;
+  }
+
+  .titulo {
+    font-size: 1.75rem;
+    max-width: 25ch;
+  }
+
+  .subtitulo {
+    font-size: 1.5rem;
+    max-width: 30ch;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    gap: 1.2rem;
+  }
+
+  .cardImg {
+    max-height: 15rem;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+    max-width: 20ch;
+  }
+
+  .subtitulo {
+    font-size: 1.25rem;
+    max-width: 25ch;
+  }
+
+  .textContainer {
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile Large*/
+@media (max-width: 480px) {
+  .container {
+    gap: 1rem;
+  }
+
+  .cardImg {
+    max-height: 13rem;
+  }
+
+  .titulo {
+    font-size: 1.25rem;
+    max-width: 35ch;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+    max-width: 45ch;
+  }
+
+  .textContainer {
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .container {
+    gap: 1rem;
+  }
+  .cardImg {
+    max-height: 10rem;
+  }
+  .titulo {
+    font-size: 1.25rem;
+    max-width: 30ch;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+    max-width: 35ch;
+  }
+
+  .textContainer {
+    gap: 0;
   }
 }

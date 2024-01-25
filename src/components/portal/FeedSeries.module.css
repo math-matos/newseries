@@ -3,12 +3,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   gap: 2rem;
-  max-width: 100%;
 }
 
 .titulos {
-  color: #121212;
-  font-family: Inter;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -18,23 +15,27 @@
   display: flex;
   gap: 1rem;
   margin: 0 auto;
-  max-width: fit-content;
   padding-top: 2rem;
 }
-.botaoMenos {
-  border-radius: 35% 0 0 35%;
+
+.botaoMenos,
+.botaoMenosDesativado {
+  border-radius: 25% 0 0 25%;
   background: #fed916;
+  padding: 1.5rem 3.5rem;
 }
 .botaoMenosDesativado {
-  border-radius: 35% 0 0 35%;
   background: #a69851;
 }
-.botaoMais {
-  border-radius: 0 35% 35% 0;
-  background: #fed916;
-}
+
+.botaoMais,
 .botaoMaisDesativado {
-  border-radius: 0 35% 35% 0;
+  border-radius: 0 25% 25% 0;
+  background: #fed916;
+  padding: 1.5rem 3.5rem;
+}
+
+.botaoMaisDesativado {
   background: #a69851;
 }
 
@@ -42,16 +43,17 @@
   border: none;
 }
 
-@media (max-width: 480px) {
+/* Desktop padrão */
+@media (max-width: 1280px) {
   .seriesContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 100%;
+    justify-content: space-between;
+    gap: 1.75rem;
   }
 
   .titulos {
-    font-size: 1.75rem;
+    color: #121212;
+    font-family: Inter;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
 
@@ -59,7 +61,69 @@
     display: flex;
     gap: 1rem;
     margin: 0 auto;
-    width: fit-content;
-    padding-top: 2rem;
+    padding: 0rem;
+  }
+}
+
+/* Notebook */
+@media (max-width: 1024px) {
+  .seriesContainer {
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .titulos {
+    font-size: 2.25rem;
+  }
+
+  .botaoMenos,
+  .botaoMaisDesativado,
+  .botaoMenosDesativado,
+  .botaoMais {
+    padding: 1.5rem 3rem;
+  }
+
+  .botoesContainer {
+    padding: 0;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .botaoMenos,
+  .botaoMaisDesativado,
+  .botaoMenosDesativado,
+  .botaoMais {
+    padding: 1.25rem 2.5rem;
+  }
+
+  .botoesContainer {
+    padding: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .seriesContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .titulos {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .botoesContainer {
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .botaoMenos,
+  .botaoMaisDesativado,
+  .botaoMenosDesativado,
+  .botaoMais {
+    padding: 1rem 2rem;
   }
 }

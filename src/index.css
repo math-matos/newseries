@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -11,6 +10,7 @@
   line-height: 1.5;
   font-weight: 400;
   font-size: 62.5%;
+  color: #121212;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,14 +20,7 @@
 
 /* FIM HEADER */
 
-h1 {
-  font-size: 3rem;
-  color: white;
-}
-
 button {
-  padding: 0.4rem 2rem;
-  font-size: 2rem;
   font-family: inherit;
   cursor: pointer;
   border: none;
