@@ -6,7 +6,7 @@
   display: flex;
   cursor: pointer;
   width: 100%;
-  height: 50rem;
+  max-height: 60rem;
   object-fit: cover;
   object-position: 50% 50%;
   border-radius: 1rem;
@@ -26,11 +26,11 @@
   top: 80%;
   left: 1.5rem;
   color: white;
-  font-family: Inter;
   font-size: 2.25rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .subtitulo {
@@ -45,10 +45,17 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-@media (min-width: 1024px) {
+/* Desktop padrão */
+@media (min-width: 1280px) {
   .swiperSlide {
     height: 40rem;
+  }
+}
+
+/* Notebook */
+@media (min-width: 1024px) {
+  .swiperSlide {
+    height: 35rem;
   }
 
   .titulo {
@@ -59,6 +66,27 @@
   .subtitulo {
     left: 2rem;
     font-size: 1.5rem;
-    width: 110ch;
+    max-width: 95ch;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .swiperSlide {
+    height: 25rem;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+    width: 24ch;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+    width: 40ch;
   }
 }

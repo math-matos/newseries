@@ -1,4 +1,4 @@
-import styles from "./CardNoticia.module.css";
+import styles from './CardNoticia.module.css';
 
 type Props = { url: string; titulo: string; subtitulo: string };
 const CardNoticia = ({ url, titulo, subtitulo }: Props) => {
