@@ -7,6 +7,7 @@ export interface Series {
   overview: string;
   poster_path: string;
   backdrop_path: string;
+  first_air_date: string;
   id: string;
 }
 
