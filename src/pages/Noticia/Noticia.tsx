@@ -7,6 +7,7 @@ export const Noticia = () => {
   const { series } = useFetch();
 
   const serieSelecionada = series && series.find((serie) => serie.id == id);
+
   console.log(serieSelecionada);
 
   return (
@@ -25,7 +26,7 @@ export const Noticia = () => {
           </p>
           <p className="por-fulano-silva">
             <span className="span-1">
-              Por {`${serieSelecionada && serieSelecionada.name}`} - 01/01/1990 - 12h00 em{" "}
+              Por Fallen da Silva | {`${serieSelecionada && serieSelecionada.first_air_date}`} - 12h00 em{" "}
             </span>
             <strong>Séries Nacionais</strong>
           </p>
@@ -47,7 +48,9 @@ export const Noticia = () => {
               <img
                 className="feed-img"
                 alt="pessoa vendo filme"
-                src="/public/slide1.png"
+                src={`https://image.tmdb.org/t/p/w500/${
+                  serieSelecionada && serieSelecionada.backdrop_path
+                }`}
               />
               <p className="see-more-text">
                 Worem ipsum dolor sit amet, consectetur adipiscing elit.
