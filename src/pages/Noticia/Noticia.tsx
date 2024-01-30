@@ -1,6 +1,12 @@
 import { useParams } from "react-router-dom";
-import "./Noticia.css";
+import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
+
+import { Button } from "@mui/material";
+
+import "./Noticia.css";
+import { Avaliacao } from "../../components/avaliacao/Avaliacao";
+import { VejaMais } from "../../components/veja-mais/VejaMais";
 
 export const Noticia = () => {
   const { id } = useParams();
@@ -9,6 +15,12 @@ export const Noticia = () => {
   const serieSelecionada = series && series.find((serie) => serie.id == id);
 
   console.log(serieSelecionada);
+
+  const [isLogged, setIsLogged] = useState(false);
+
+  const toggleLoginStatus = () => {
+    setIsLogged(!isLogged);
+  };
 
   return (
     <div className="noticia">
@@ -26,7 +38,9 @@ export const Noticia = () => {
           </p>
           <p className="por-fulano-silva">
             <span className="span-1">
-              Por Fallen da Silva | {`${serieSelecionada && serieSelecionada.first_air_date}`} - 12h00 em{" "}
+              Por Fallen da Silva |{" "}
+              {`${serieSelecionada && serieSelecionada.first_air_date}`} - 12h00
+              em{" "}
             </span>
             <strong>Séries Nacionais</strong>
           </p>
@@ -36,64 +50,18 @@ export const Noticia = () => {
         </div>
       </div>
 
-      <div className="overlap-wrapper">
-        <div className="see-more">
-          <div className="see-more-line">
-            <div className="text-wrapper-7">Veja mais</div>
-            <img className="line" alt="linha preta" src="../../../public/Line7.png" />
-          </div>
-
-          <div className="see-more-content">
-            <div className="image-and-text">
-              <img
-                className="feed-img"
-                alt="pessoa vendo filme"
-                src={`https://image.tmdb.org/t/p/w500/${
-                  serieSelecionada && serieSelecionada.backdrop_path
-                }`}
-              />
-              <p className="see-more-text">
-                Worem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-
-            <div className="image-and-text">
-              <img
-                className="feed-img"
-                alt="pessoa vendo filme"
-                src="/public/slide1.png"
-              />
-              <p className="see-more-text">
-                Worem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-
-            <div className="image-and-text">
-              <img
-                className="feed-img"
-                alt="pessoa vendo filme"
-                src="/public/slide1.png"
-              />
-              <p className="see-more-text">
-                Worem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-
-            <div className="image-and-text">
-              <img
-                className="feed-img"
-                alt="pessoa vendo filme"
-                src="/public/slide1.png"
-              />
-              <p className="see-more-text">
-                Worem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* INICIO TABELA DA DIREITA DE VEJA MAIS + condicional da AVALIACAO */}
+      {/* usar lógica de autenticação aqui */}
+      {isLogged ? <Avaliacao /> : <VejaMais />}
+      <Button
+        sx={{ fontSize: "2rem" }}
+        variant="contained"
+        onClick={toggleLoginStatus}
+      >
+        {isLogged ? "Logout" : "Login"}
+      </Button>
+      
+      {/* FIM TABELA DA DIREITA DE VEJA MAIS + condicional da AVALIACAO */}
     </div>
   );
 };
-
-export default Noticia;

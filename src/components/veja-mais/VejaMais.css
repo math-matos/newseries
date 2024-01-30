@@ -1,0 +1,170 @@
+.noticia {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem;
+  gap: 2rem;
+}
+
+.noticia .mid-text {
+  padding-left: 20rem;
+}
+
+/* .noticia .overlap-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  } */
+
+.noticia .mid-text,
+.noticia .overlap-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.principal-image {
+  width: 100rem;
+  max-height: 40rem;
+  border-radius: 2rem;
+  object-position: 0 20%;
+  object-fit: cover;
+}
+
+.noticia .text-wrapper,
+.noticia .text-wrapper-7,
+.noticia .see-more-text {
+  font-family: "Inter-Bold", Helvetica;
+  color: #121212;
+}
+
+.noticia .text-wrapper {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 100%;
+  margin-top: 5.2rem;
+  margin-bottom: 1rem;
+}
+
+.noticia .por-fulano-silva,
+.noticia .dorem-ipsum-dolor,
+.noticia .see-more-text,
+.noticia .por-fulano-silva {
+  font-size: 2.2rem;
+  font-family: "Inter-Regular", Helvetica;
+  color: #121212;
+}
+
+.noticia .por-fulano-silva {
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.noticia .span {
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.noticia .dorem-ipsum-dolor {
+  font-weight: 400;
+  letter-spacing: 0.66px;
+  line-height: 3.5rem;
+  text-align: justify;
+  width: 867px;
+}
+
+.noticia .header {
+  background-color: transparent;
+  height: 9rem;
+  width: 100%;
+}
+
+.noticia .vector {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.noticia .see-more {
+  height: auto;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.noticia .see-more-content {
+  width: 100%;
+  max-width: 42rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.image-and-text {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+
+.image-and-text p {
+  margin-left: 2rem;
+}
+
+.noticia .text-wrapper-7 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+}
+
+.noticia .see-more-content {
+  height: 10.4rem;
+  left: 0.4rem;
+  position: absolute;
+  top: 6.3rem;
+  width: 42rem;
+}
+
+.noticia .feed-img {
+  height: auto;
+  width: 15.6rem;
+  max-width: 100%;
+
+  border-radius: 1rem;
+}
+
+.noticia .see-more-text {
+  font-weight: 700;
+  line-height: normal;
+  width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+  .noticia .text-wrapper {
+    font-size: 18px;
+  }
+
+  .noticia .por-fulano-silva {
+    font-size: 1.4rem;
+  }
+
+  .noticia .dorem-ipsum-dolor {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .noticia .see-more-text {
+    font-size: 1.4rem;
+  }
+
+  .noticia .image-and-text p {
+    margin: 0.5rem 0;
+  }
+}
