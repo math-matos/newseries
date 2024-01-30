@@ -18,7 +18,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* FIM HEADER */
+img {
+  max-width: 100%;
+  display: block;
+}
 
 button {
   font-family: inherit;

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {
   Box,
-  InputLabel,
   MenuItem,
   Select,
   SelectChangeEvent,
@@ -10,6 +9,7 @@ import {
 import useFetch from '../../hooks/useFetch';
 import CardNoticia from '../../components/CardNoticia';
 import { Link } from 'react-router-dom';
+import CardList from '../components/CardList';
 
 const Lista = () => {
   const [categoria, setCategoria] = useState('');
@@ -42,7 +42,7 @@ const Lista = () => {
           }}
         >
           <Typography
-            variant="h3"
+            variant="h2"
             fontFamily={'Inter'}
             color={'secondary'}
             fontWeight={'700'}
@@ -58,7 +58,9 @@ const Lista = () => {
             label="Categoria"
             variant="standard"
           >
-            <MenuItem value={1}>Tecnologia</MenuItem>
+            <MenuItem value={1} color="primary">
+              Tecnologia
+            </MenuItem>
             <MenuItem value={2}>Comercial</MenuItem>
             <MenuItem value={3}>Executiva</MenuItem>
             <MenuItem value={4}>Defesa</MenuItem>
@@ -73,13 +75,14 @@ const Lista = () => {
             justifyContent: 'space-between',
             width: '100%',
             height: 'fit-content',
+            gap: '1.5rem',
           }}
         >
           {series &&
             series.map((serie, index) => (
               <li key={index}>
                 <Link to={`/serie/${serie.id}/`}>
-                  <CardNoticia
+                  <CardList
                     url={`${image_path}${serie.backdrop_path}`}
                     titulo={serie.name}
                     subtitulo={serie.overview}

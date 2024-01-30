@@ -3,13 +3,8 @@ import { createTheme } from "@mui/material";
 export const Theme = createTheme({
     typography: {
       fontFamily: [
-        'Roboto',
         'Inter',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
+        'Roboto',
       ].join(','),
     },
     palette: {
