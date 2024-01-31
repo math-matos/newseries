@@ -1,4 +1,4 @@
-import { Autocomplete, FormLabel, Stack } from "@mui/material";
+import { Autocomplete, Stack } from "@mui/material";
 
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
@@ -49,31 +49,35 @@ export const Avaliacao = () => {
                 <Rating
                   name="simple-controlled"
                   value={value}
-                  defaultValue={2}
+                  defaultValue={2.5}
                   size="large"
+                  precision={0.5}
                   onChange={(event, newValue) => {
                     setValue(newValue);
                   }}
                 />
               </Box>
 
+              <h1>Fluxo</h1>
               <FormGroup row>
-              <FormLabel component="legend"><h1>Fluxo</h1></FormLabel>
                 <FormControlLabel
                   control={<Checkbox defaultChecked />}
                   label="Descarte"
                   labelPlacement="end"
-                  sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+                  sx={{ "& .MuiSvgIcon-root": { fontSize: 28 } }}
                 />
+
                 <FormControlLabel
                   control={<Checkbox />}
                   label="Arquivo"
                   labelPlacement="end"
+                  sx={{ "& .MuiSvgIcon-root": { fontSize: 28 } }}
                 />
                 <FormControlLabel
                   control={<Checkbox />}
                   label="Divulgação"
                   labelPlacement="end"
+                  sx={{ "& .MuiSvgIcon-root": { fontSize: 28 } }}
                 />
               </FormGroup>
 
@@ -81,12 +85,14 @@ export const Avaliacao = () => {
               <Box
                 component="form"
                 sx={{
-                  "& > :not(style)": { m: 1, width: "41.5rem" },
+                  "& > :not(style)": { mt: 1 },
                 }}
                 noValidate
                 autoComplete="off"
               >
                 <TextField
+                  fullWidth
+                  style={{}}
                   id="filled-basic"
                   label="Escreva aqui o seu comentário"
                   variant="filled"
