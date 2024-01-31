@@ -1,4 +1,4 @@
-import { Autocomplete } from "@mui/material";
+import { Autocomplete, FormLabel, Stack } from "@mui/material";
 
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
@@ -28,78 +28,71 @@ export const Avaliacao = () => {
 
         <div className="see-more-content">
           <div className="image-and-text">
-            <Autocomplete
-              disablePortal
-              id="combo-box-demo"
-              options={top100Films}
-              sx={{ width: "100%", display: "flex" }}
-              renderInput={(params) => (
-                <TextField {...params} label="Categorias" />
-              )}
-            />
-            <Box
-              sx={{
-                "& > legend": { mt: 2 },
-              }}
-            >
-              <Typography
+            <Stack>
+              <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={top100Films}
+                sx={{ width: "41.5rem", display: "flex" }}
+                renderInput={(params) => (
+                  <TextField {...params} label="Categorias" />
+                )}
+              />
+              <Box
                 sx={{
-                  width: "100%",
-                  margin: "0 auto",
-                  display: "flex",
-                  flexDirection: "column",
+                  "& > legend": { mt: 2 },
                 }}
-                component="legend"
               >
-                Avaliação
-              </Typography>
-              <Rating
-                name="simple-controlled"
-                value={value}
+                <Typography component="legend">
+                  <h1>Avaliação</h1>
+                </Typography>
+                <Rating
+                  name="simple-controlled"
+                  value={value}
+                  defaultValue={2}
+                  size="large"
+                  onChange={(event, newValue) => {
+                    setValue(newValue);
+                  }}
+                />
+              </Box>
+
+              <FormGroup row>
+              <FormLabel component="legend"><h1>Fluxo</h1></FormLabel>
+                <FormControlLabel
+                  control={<Checkbox defaultChecked />}
+                  label="Descarte"
+                  labelPlacement="end"
+                  sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+                />
+                <FormControlLabel
+                  control={<Checkbox />}
+                  label="Arquivo"
+                  labelPlacement="end"
+                />
+                <FormControlLabel
+                  control={<Checkbox />}
+                  label="Divulgação"
+                  labelPlacement="end"
+                />
+              </FormGroup>
+
+              <h1>Comentários</h1>
+              <Box
+                component="form"
                 sx={{
-                  width: "100%",
+                  "& > :not(style)": { m: 1, width: "41.5rem" },
                 }}
-                onChange={(event, newValue) => {
-                  setValue(newValue);
-                }}
-              />
-            </Box>
-
-            <h1>Fluxo</h1>
-            <FormGroup
-              sx={{
-                width: "100%",
-              }}
-            >
-              <FormControlLabel
-                control={<Checkbox defaultChecked />}
-                label="Descarte"
-              />
-              <FormControlLabel
-                control={<Checkbox defaultChecked />}
-                label="Arquivo"
-              />
-              <FormControlLabel
-                control={<Checkbox defaultChecked />}
-                label="Divulgação"
-              />
-            </FormGroup>
-
-            <h1>Comentários</h1>
-            <Box
-              component="form"
-              sx={{
-                "& > :not(style)": { m: 1, width: "25ch" },
-                width: "100%",
-                margin: "0 auto",
-                display: "flex",
-                flexDirection: "column",
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField id="filled-basic" label="Filled" variant="filled" />
-            </Box>
+                noValidate
+                autoComplete="off"
+              >
+                <TextField
+                  id="filled-basic"
+                  label="Escreva aqui o seu comentário"
+                  variant="filled"
+                />
+              </Box>
+            </Stack>
           </div>
         </div>
       </div>
