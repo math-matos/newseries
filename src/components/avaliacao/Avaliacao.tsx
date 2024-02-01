@@ -30,12 +30,16 @@ export const Avaliacao = () => {
           <div className="image-and-text">
             <Stack>
               <Autocomplete
-                disablePortal
-                id="combo-box-demo"
+                multiple
+                limitTags={2}
+                id="multiple-limit-tags"
                 options={top100Films}
-                sx={{ width: "41.5rem", display: "flex" }}
                 renderInput={(params) => (
-                  <TextField {...params} label="Categorias" />
+                  <TextField
+                    {...params}
+                    label="Categorias"
+                    placeholder="Categorias"
+                  />
                 )}
               />
               <Box
@@ -62,20 +66,30 @@ export const Avaliacao = () => {
               <FormGroup row>
                 <FormControlLabel
                   control={<Checkbox defaultChecked />}
-                  label="Descarte"
+                  label={
+                    <Typography sx={{ fontSize: "1.5rem" }}>
+                      Descarte
+                    </Typography>
+                  }
                   labelPlacement="end"
                   sx={{ "& .MuiSvgIcon-root": { fontSize: 28 } }}
                 />
 
                 <FormControlLabel
                   control={<Checkbox />}
-                  label="Arquivo"
+                  label={
+                    <Typography sx={{ fontSize: "1.5rem" }}>Arquivo</Typography>
+                  }
                   labelPlacement="end"
                   sx={{ "& .MuiSvgIcon-root": { fontSize: 28 } }}
                 />
                 <FormControlLabel
                   control={<Checkbox />}
-                  label="Divulgação"
+                  label={
+                    <Typography sx={{ fontSize: "1.5rem" }}>
+                      Divulgacao
+                    </Typography>
+                  }
                   labelPlacement="end"
                   sx={{ "& .MuiSvgIcon-root": { fontSize: 28 } }}
                 />
