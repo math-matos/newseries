@@ -34,15 +34,10 @@ export const Avaliacao = () => {
                 limitTags={2}
                 id="multiple-limit-tags"
                 options={top100Films}
-                defaultValue={[
-                  top100Films[13],
-                  top100Films[12],
-                  top100Films[11],
-                ]}
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    label="limitTags"
+                    label="Categorias"
                     placeholder="Categorias"
                   />
                 )}
