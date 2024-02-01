@@ -23,16 +23,6 @@ export const VejaMais = () => {
             <p className="see-more-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-
-            <div className="image-and-text">
-            <img
-              className="feed-img"
-              alt="Geto acenando"
-              src="https://ovicio.com.br/wp-content/uploads/2023/08/20230822-suguru-geto-3.webp"
-            />
-            <p className="see-more-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
           </div>
 
           <div className="image-and-text">
@@ -56,7 +46,16 @@ export const VejaMais = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
-          
+
+          <div className="image-and-text">
+            <img
+              className="feed-img"
+              alt="Geto acenando"
+              src="https://ovicio.com.br/wp-content/uploads/2023/08/20230822-suguru-geto-3.webp"
+            />
+            <p className="see-more-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
         </div>
       </div>
